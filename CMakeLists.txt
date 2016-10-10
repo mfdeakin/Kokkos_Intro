@@ -14,7 +14,7 @@ include_directories("${KOKKOS_PATH}/core/src")
 file(GLOB SRC "src/*.[ch]pp")
 file(GLOB KOKKOS_SRC "${KOKKOS_PATH}/core/src/impl/*.cpp" "${KOKKOS_PATH}/core/src/Threads/*.cpp")
 
-add_compile_options("-std=c++11")
+add_compile_options(-std=c++11 -Wall)
 
 if(${CUDA_TARGET} AND ${CUDA_FOUND})
   set(CUDA_64_BIT_DEVICE_CODE ON)
